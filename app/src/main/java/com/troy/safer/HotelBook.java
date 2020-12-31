@@ -87,7 +87,7 @@ public class HotelBook extends AppCompatActivity {
                 final RatingBar hotelstars = findViewById(R.id.ratingBar);
 
                 String price = dataSnapshot.child("price").getValue(String.class);
-                hotelprice.setText(price);
+                hotelprice.setText(price+" LE.");
                 String place = dataSnapshot.child("place").getValue(String.class);
                 hotelplace.setText(place);
                 String stars = dataSnapshot.child("stars").getValue(String.class);
@@ -156,12 +156,15 @@ public class HotelBook extends AppCompatActivity {
         Intent intent = new Intent (HotelBook.this, MainActivity.class);
         startActivity(intent);
     }
-    public void linkopen(final String name){
+    String s;
+    public void linkopen(final String link){
 
         ImageView linkopen = findViewById(R.id.open);
         linkopen.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(name));
+                if (!link.startsWith("http://") && !link.startsWith("https://"))
+                    s = "http://" + link;
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(s));
                 startActivity(browserIntent);
             }
         });

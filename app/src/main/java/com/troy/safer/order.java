@@ -13,6 +13,9 @@ import android.widget.Toast;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class order extends AppCompatActivity {
 
     @Override
@@ -51,6 +54,10 @@ if (name.getText().toString().equals("")||email.getText().toString().equals("")|
     mDbRef.child("adult").setValue(adults.getText().toString());
     mDbRef.child("food").setValue(food.getText().toString());
     mDbRef.child("nights").setValue(nights.getText().toString());
+    SimpleDateFormat sdf = new SimpleDateFormat("EEE, d MMM yyyy HH:mm");
+    String currentDateandTime = sdf.format(new Date());
+    mDbRef.child("time").setValue(currentDateandTime);
+
     Toast.makeText(order.this,"your order submitted",Toast.LENGTH_LONG).show();
     Intent intent = new Intent (order.this, MainActivity.class);
     startActivity(intent);
