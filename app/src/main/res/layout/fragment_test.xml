@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#7C1F80"
+    tools:context=".test">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <SearchView
+            android:id="@+id/searchView"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="8dp"
+
+            android:background="@drawable/roundedtext"
+            android:drawableStart="@drawable/ic_search_black_24dp"
+            android:drawableLeft="@drawable/ic_search_black_24dp"
+            android:drawablePadding="15dp"
+            android:hint="search here"
+            android:inputType="text"
+            android:padding="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+            app:layout_constraintVertical_bias="0.003" />
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/ref"
+            android:layout_width="match_parent"
+            android:background="@drawable/custom_layout"
+            android:paddingTop="10dp"
+            android:layout_height="match_parent">
+
+            <com.todkars.shimmer.ShimmerRecyclerView
+                android:id="@+id/shimmer_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#f7f7f7"
+
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0"
+                app:shimmer_recycler_item_count="10"
+                app:shimmer_recycler_layout="@layout/homeitems">
+
+            </com.todkars.shimmer.ShimmerRecyclerView>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </LinearLayout>
+
+</FrameLayout>

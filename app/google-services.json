@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "243882662633",
+    "firebase_url": "https://safer-7819e.firebaseio.com",
+    "project_id": "safer-7819e",
+    "storage_bucket": "safer-7819e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:243882662633:android:f0e146564f88abdbfe2e78",
+        "android_client_info": {
+          "package_name": "com.troy.safer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "243882662633-36049t9l65gkm6ppm7fq67dv7gpnkoe2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.troy.safer",
+            "certificate_hash": "cb58138b918546c290641844e5738631fa66207a"
+          }
+        },
+        {
+          "client_id": "243882662633-40jdkfu2c4oghoq2et7o0l8sqflpc9ag.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxwfoJeX65AB5VUUI1aiG4bazwnldAdOA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "243882662633-40jdkfu2c4oghoq2et7o0l8sqflpc9ag.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
